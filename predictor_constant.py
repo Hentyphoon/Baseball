@@ -7,9 +7,9 @@ import pandas as pd
 def collect_data():
  today = datetime.today().strftime('%Y-%m-%d')
  data = pyball.statcast(start_date=2025-01-01, end_date=today)
- length = len(data)
- X
- 
+ length = len(data)//2
+ train_data = data[:length]
+ test_data = data[length:]
  
 def step_size(x):
     return x

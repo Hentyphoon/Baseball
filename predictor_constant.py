@@ -10,6 +10,7 @@ def collect_data():
  length = len(data)//2
  train_data = data[:length]
  test_data = data[length:]
+ return train_data, test_data
  
 def step_size(x):
     return x
@@ -39,14 +40,10 @@ def mle_predictor(x, y, step_size, T):
 
 
 def main():
-    np.random.seed(42)  
-    X = np.random.rand(100, 3) 
-    Y = (X[:, 0] + X[:, 1] > 1).astype(int)  
-    step = step_size(0.01)  
-    epochs = 100 
-    weights = mle_predictor(X, Y, step, epochs)
-
-    print("Trained Weights:", weights)
+    train_data, test_data = collect_data()
+    x = 
+    y = 
+    w = mle_predictor(x,y,step_size, T)
 
 if __name__ == "__main__":
     main()
